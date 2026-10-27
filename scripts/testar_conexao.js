@@ -1,4 +1,4 @@
-const db = require('./firebase');
+const db = require('../src/firebase');
 
 async function testarConexao() {
   try {
