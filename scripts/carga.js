@@ -9,6 +9,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 0.80,
     quantidadeEstoque: 150,
+    ingredientes: ['farinha de trigo', 'água', 'fermento', 'sal'],
     disponivel: true
   },
   {
