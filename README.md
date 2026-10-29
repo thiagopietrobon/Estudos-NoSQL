@@ -141,21 +141,36 @@ Os campos de preço e estoque variam de acordo com a forma de venda. Assim, o si
 
 A consulta utiliza o campo `categoria` para localizar os documentos cujo valor é `pao`.
 
+![Resultado da consulta 1](prints/categoria_pao.png)
+
 **2. Quais produtos são vendidos por peso?**
 
 A consulta utiliza o campo `formaVenda` para encontrar os produtos com valor `peso`.
+
+![Resultado da consulta 2](prints/por_peso.png)
+
 
 **3. Quais produtos têm preço inferior a R$ 5,00?**
 
 A consulta compara o campo numérico `preco` com o valor 5. Na implementação atual, ela considera os produtos vendidos por unidade que possuem esse campo.
 
+![Resultado da consulta 3](prints/precoMenorCinco.png)
+
 **4. Quais produtos vendidos por unidade têm estoque igual ou inferior a 10?**
 
 A consulta utiliza o campo `quantidadeEstoque` para identificar produtos com estoque baixo. Produtos vendidos por peso utilizam o campo `estoqueGramas` e não entram nessa consulta.
 
+![Resultado da consulta 4](prints/estoqueMenorQue.png)
+
 **5. Quais produtos estão disponíveis para venda?**
 
 A consulta utiliza o campo booleano `disponivel` para localizar os produtos cujo valor é `true`.
+
+![Resultado da consulta 5](prints/disponivel.png)
+
+**Recurso do modelo de documentos: array**
+
+O Firestore permite armazenar arrays diretamente nos documentos. No projeto, o produto pao001 possui um campo ingredientes, que armazena uma lista com os ingredientes do produto. Isso evita a necessidade de criar uma coleção separada apenas para essa lista.
 
 ### 4.4. Como a modelagem facilita as consultas
 
