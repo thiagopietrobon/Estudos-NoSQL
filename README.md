@@ -172,4 +172,4 @@ O arquivo `serviceAccountKey.json` contém credenciais privadas e deve permanece
 Em ambientes compartilhados ou de produção, recomenda-se utilizar autenticação gerenciada e conceder apenas as permissões necessárias.
 
 ## 6. Autores
-
+ Eduarda Pilon Guarino e Thiago Henrique Pietrobon
