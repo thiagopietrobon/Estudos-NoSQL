@@ -186,5 +186,12 @@ O arquivo `serviceAccountKey.json` contém credenciais privadas e deve permanece
 
 Em ambientes compartilhados ou de produção, recomenda-se utilizar autenticação gerenciada e conceder apenas as permissões necessárias.
 
-## 6. Autores
+## 6.Conclusão: qual modelo é melhor para este caso?
+Os bancos de dados relacional e orientado a documentos possuem características diferentes, e a escolha depende das necessidades do sistema. Neste projeto, o Cloud Firestore foi utilizado para armazenar o catálogo de produtos de uma padaria. Seu modelo de documentos permite guardar informações relacionadas em um único documento, como o nome, a categoria, o preço, o estoque e uma lista de ingredientes. Essa estrutura facilita a representação dos produtos e oferece flexibilidade para incluir novos campos conforme a necessidade.
+
+Por outro lado, um banco de dados relacional, como o PostgreSQL, organiza os dados em tabelas relacionadas e utiliza chaves primárias e estrangeiras para manter a integridade dos relacionamentos. Essa característica é útil para um sistema de padaria que precise controlar produtos, categorias, estoque e outras informações de forma consistente. Além disso, o SQL oferece recursos para consultas complexas e operações que envolvem várias tabelas.
+
+Para o catálogo simples desenvolvido neste trabalho, o Firestore é uma opção adequada pela flexibilidade de seu modelo e pela facilidade de armazenar listas diretamente nos documentos. Entretanto, se o sistema evoluísse para controlar operações de estoque, vendas e movimentações que exigem relacionamentos e regras de integridade mais rigorosas, um banco relacional poderia ser mais apropriado. Portanto, não existe um modelo universalmente melhor: a escolha deve considerar os requisitos, a complexidade e a evolução esperada da aplicação.
+
+## 7. Autores
  Eduarda Pilon Guarino e Thiago Henrique Pietrobon
