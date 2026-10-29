@@ -186,7 +186,33 @@ O arquivo `serviceAccountKey.json` contém credenciais privadas e deve permanece
 
 Em ambientes compartilhados ou de produção, recomenda-se utilizar autenticação gerenciada e conceder apenas as permissões necessárias.
 
-## 6.Conclusão: qual modelo é melhor para este caso?
+## 6. Comparativo com o banco de dados relacional
+
+**6.1. Modelagem relacional**
+
+Para comparar o Cloud Firestore com um banco de dados relacional, o mesmo sistema de catálogo de produtos da padaria foi modelado em SQL utilizando três tabelas: categorias, produtos e ingredientes.
+
+O relacionamento entre categorias e produtos é de um para muitos: uma categoria pode possuir vários produtos. Já a tabela ingredientes permite armazenar vários ingredientes associados a um mesmo produto.
+
+**6.2 Duas consultas reescritas em SQL**
+
+**Consulta 1 — Quais produtos pertencem à categoria pão?**
+
+No Firestore, a consulta utiliza o campo categoria para localizar os produtos da categoria pao. Em SQL, é necessário relacionar as tabelas produtos e categorias.
+
+**Consulta 2 — Quais produtos estão disponíveis para venda?**
+No Firestore, essa consulta utiliza o campo disponivel com o valor true. Em SQL, a condição equivalente é:
+
+```bash
+SELECT *
+FROM produtos
+WHERE disponivel = TRUE;
+```
+
+O resultado contém os produtos cujo campo disponivel está definido como verdadeiro.
+
+**6.3.Conclusão: qual modelo é melhor para este caso?**
+
 Os bancos de dados relacional e orientado a documentos possuem características diferentes, e a escolha depende das necessidades do sistema. Neste projeto, o Cloud Firestore foi utilizado para armazenar o catálogo de produtos de uma padaria. Seu modelo de documentos permite guardar informações relacionadas em um único documento, como o nome, a categoria, o preço, o estoque e uma lista de ingredientes. Essa estrutura facilita a representação dos produtos e oferece flexibilidade para incluir novos campos conforme a necessidade.
 
 Por outro lado, um banco de dados relacional, como o PostgreSQL, organiza os dados em tabelas relacionadas e utiliza chaves primárias e estrangeiras para manter a integridade dos relacionamentos. Essa característica é útil para um sistema de padaria que precise controlar produtos, categorias, estoque e outras informações de forma consistente. Além disso, o SQL oferece recursos para consultas complexas e operações que envolvem várias tabelas.
