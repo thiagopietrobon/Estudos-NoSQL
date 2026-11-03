@@ -1,4 +1,3 @@
-
 const db = require('../src/firebase');
 
 const produtos = [
@@ -19,6 +18,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 1.50,
     quantidadeEstoque: 60,
+    ingredientes: ['farinha integral', 'água', 'fermento', 'sal'],
     disponivel: true
   },
   {
@@ -28,6 +28,7 @@ const produtos = [
     formaVenda: 'peso',
     precoPorKg: 32.00,
     estoqueGramas: 4500,
+    ingredientes: ['polvilho', 'queijo', 'leite', 'ovo', 'óleo'],
     disponivel: true
   },
   {
@@ -37,6 +38,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 2.50,
     quantidadeEstoque: 35,
+    ingredientes: ['farinha de milho', 'farinha de trigo', 'leite', 'ovo', 'açúcar'],
     disponivel: true
   },
   {
@@ -55,6 +57,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 5.00,
     quantidadeEstoque: 18,
+    ingredientes: ['farinha de trigo', 'leite', 'ovo', 'açúcar', 'creme de confeiteiro'],
     disponivel: true
   },
   {
@@ -64,6 +67,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 3.00,
     quantidadeEstoque: 40,
+    ingredientes: ['leite condensado', 'chocolate em pó', 'manteiga'],
     disponivel: true
   },
   {
@@ -73,6 +77,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 12.00,
     quantidadeEstoque: 12,
+    ingredientes: ['cenoura', 'farinha de trigo', 'ovo', 'açúcar', 'óleo'],
     disponivel: true
   },
   {
@@ -100,6 +105,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 7.50,
     quantidadeEstoque: 25,
+    ingredientes: ['farinha de trigo', 'frango', 'cebola', 'caldo de frango'],
     disponivel: true
   },
   {
@@ -109,6 +115,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 6.00,
     quantidadeEstoque: 20,
+    ingredientes: ['farinha de trigo', 'manteiga', 'frango', 'cebola'],
     disponivel: true
   },
   {
@@ -118,6 +125,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 5.50,
     quantidadeEstoque: 22,
+    ingredientes: ['farinha de trigo', 'carne moída', 'cebola', 'tomate'],
     disponivel: true
   },
   {
@@ -136,6 +144,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 5.00,
     quantidadeEstoque: 16,
+    ingredientes: ['farinha de trigo', 'queijo', 'fermento', 'leite'],
     disponivel: true
   },
   {
@@ -190,6 +199,7 @@ const produtos = [
     formaVenda: 'peso',
     precoPorKg: 30.00,
     estoqueGramas: 4000,
+    ingredientes: ['polvilho', 'óleo', 'ovo', 'sal'],
     disponivel: true
   },
   {
@@ -226,6 +236,7 @@ const produtos = [
     formaVenda: 'peso',
     precoPorKg: 38.00,
     estoqueGramas: 2200,
+    ingredientes: ['farinha de trigo', 'queijo', 'manteiga', 'ovo'],
     disponivel: true
   },
   {
@@ -235,6 +246,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 45.00,
     quantidadeEstoque: 4,
+    ingredientes: ['farinha de trigo', 'chocolate', 'ovo', 'açúcar', 'leite'],
     disponivel: true
   },
   {
@@ -262,6 +274,7 @@ const produtos = [
     formaVenda: 'unidade',
     preco: 6.50,
     quantidadeEstoque: 14,
+    ingredientes: ['farinha de trigo', 'limão', 'ovo', 'açúcar', 'manteiga'],
     disponivel: true
   },
   {
