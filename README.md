@@ -220,4 +220,4 @@ Por outro lado, um banco de dados relacional, como o PostgreSQL, organiza os dad
 Para o catálogo simples desenvolvido neste trabalho, o Firestore é uma opção adequada pela flexibilidade de seu modelo e pela facilidade de armazenar listas diretamente nos documentos. Entretanto, se o sistema evoluísse para controlar operações de estoque, vendas e movimentações que exigem relacionamentos e regras de integridade mais rigorosas, um banco relacional poderia ser mais apropriado. Portanto, não existe um modelo universalmente melhor: a escolha deve considerar os requisitos, a complexidade e a evolução esperada da aplicação.
 
 ## 7. Autores
- Eduarda Pilon Guarino e Thiago Henrique Pietrobon
+ Eduarda Pilon Guarino, João Gabriel Silva de Melo e Thiago Henrique Pietrobon
