@@ -118,7 +118,7 @@ Resultados:
 
 ### 3.8. Justificativa da escolha do banco
 
-Escolhemos o Cloud Firestore por ser um banco NoSQL orientado a documentos, com integração simples com JavaScript, hospedagem na nuvem e suporte a campos de diferentes tipos, incluindo arrays. Essas características facilitam o armazenamento e a consulta dos produtos sem a necessidade de administrar um servidor de banco de dados próprio.
+Entre os bancos orientados a documentos, como MongoDB, CouchDB e Cloud Firestore, escolhemos o Cloud Firestore por ser um serviço gerenciado: o banco já fica hospedado na nuvem, e para usá-lo basta criar um projeto no Firebase, habilitar o Firestore e gerar uma chave de conta de serviço. Com MongoDB ou CouchDB seria necessário instalar e manter um servidor próprio, por exemplo em Docker, ou configurar um cluster em nuvem. O Firestore também tem integração simples com JavaScript pelo Firebase Admin SDK, aceita campos de tipos variados, incluindo arrays e consultas sobre eles (array-contains), e cria automaticamente os índices das consultas por um único campo, como as usadas neste trabalho. Essas características permitiram concentrar o esforço na modelagem dos dados e nas consultas do catálogo da padaria
 
 ## 4. Modelagem dos dados
 
