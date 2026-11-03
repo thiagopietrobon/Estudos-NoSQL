@@ -1,5 +1,7 @@
 const db = require('../src/firebase');
 
+const ID_TESTE = 'teste001';
+
 async function inserirProduto() {
   try {
     const produto = {
@@ -8,10 +10,11 @@ async function inserirProduto() {
       formaVenda: 'unidade',
       preco: 4.50,
       quantidadeEstoque: 20,
+      ingredientes: ['farinha de trigo', 'alho', 'manteiga', 'sal'],
       disponivel: true
     };
 
-    await db.collection('produtos').doc('teste001').set(produto);
+    await db.collection('produtos').doc(ID_TESTE).set(produto);
 
     console.log('Produto inserido com sucesso!');
   } catch (erro) {
@@ -21,7 +24,7 @@ async function inserirProduto() {
 
 async function consultarProduto() {
   try {
-    const resultado = await db.collection('produtos').doc('teste001').get();
+    const resultado = await db.collection('produtos').doc(ID_TESTE).get();
 
     if (resultado.exists) {
       console.log('Produto encontrado:');
@@ -35,25 +38,37 @@ async function consultarProduto() {
 }
 
 async function atualizarProduto() {
-    try{
-        await db.collection('produtos').doc('teste001').update({preco: 5.50, quantidadeEstoque: 35})
-        console.log('Produto atualizado com sucesso!');
-    }catch (erro) {
-        console.log('Erro ao atualizar produto:', erro.message);
-    }
+  try {
+    await db.collection('produtos').doc(ID_TESTE).update({ preco: 5.50, quantidadeEstoque: 35 });
+
+    console.log('Produto atualizado com sucesso!');
+  } catch (erro) {
+    console.error('Erro ao atualizar produto:', erro.message);
+  }
 }
 
 async function excluirProduto() {
-    try{
-        await db.collection('produtos').doc('teste001').delete();
-        console.log('Produto excluído com sucesso!');
+  try {
+    await db.collection('produtos').doc(ID_TESTE).delete();
 
-    }catch (erro) {
-        console.log('Erro ao excluir produto:', erro.message);
-    }
+    console.log('Produto excluído com sucesso!');
+  } catch (erro) {
+    console.error('Erro ao excluir produto:', erro.message);
+  }
 }
 
-// inserirProduto();
-//consultarProduto();
-//atualizarProduto();
-//excluirProduto();
+const operacoes = {
+  inserir: inserirProduto,
+  consultar: consultarProduto,
+  atualizar: atualizarProduto,
+  excluir: excluirProduto
+};
+
+const operacao = operacoes[process.argv[2]];
+
+if (!operacao) {
+  console.log('Uso: node scripts/crud.js <inserir|consultar|atualizar|excluir>');
+  process.exit(1);
+}
+
+operacao();
