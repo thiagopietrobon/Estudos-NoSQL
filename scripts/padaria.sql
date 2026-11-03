@@ -1,4 +1,3 @@
-
 -- =============================================
 -- 1. CRIAR O BANCO DE DADOS
 -- =============================================
@@ -158,14 +157,76 @@ JOIN categorias AS c
 GO
 
 -- =============================================
--- 7. INGREDIENTES DO PRODUTO pao001
+-- 7. INGREDIENTES DOS PRODUTOS
+-- Dados correspondentes ao campo ingredientes do carga.js
 -- =============================================
 
 INSERT INTO ingredientes (produto_id, nome) VALUES
     ('pao001', N'farinha de trigo'),
     ('pao001', N'água'),
     ('pao001', N'fermento'),
-    ('pao001', N'sal');
+    ('pao001', N'sal'),
+    ('pao002', N'farinha integral'),
+    ('pao002', N'água'),
+    ('pao002', N'fermento'),
+    ('pao002', N'sal'),
+    ('pao003', N'polvilho'),
+    ('pao003', N'queijo'),
+    ('pao003', N'leite'),
+    ('pao003', N'ovo'),
+    ('pao003', N'óleo'),
+    ('pao004', N'farinha de milho'),
+    ('pao004', N'farinha de trigo'),
+    ('pao004', N'leite'),
+    ('pao004', N'ovo'),
+    ('pao004', N'açúcar'),
+    ('doce001', N'farinha de trigo'),
+    ('doce001', N'leite'),
+    ('doce001', N'ovo'),
+    ('doce001', N'açúcar'),
+    ('doce001', N'creme de confeiteiro'),
+    ('doce002', N'leite condensado'),
+    ('doce002', N'chocolate em pó'),
+    ('doce002', N'manteiga'),
+    ('doce003', N'cenoura'),
+    ('doce003', N'farinha de trigo'),
+    ('doce003', N'ovo'),
+    ('doce003', N'açúcar'),
+    ('doce003', N'óleo'),
+    ('salgado001', N'farinha de trigo'),
+    ('salgado001', N'frango'),
+    ('salgado001', N'cebola'),
+    ('salgado001', N'caldo de frango'),
+    ('salgado002', N'farinha de trigo'),
+    ('salgado002', N'manteiga'),
+    ('salgado002', N'frango'),
+    ('salgado002', N'cebola'),
+    ('salgado003', N'farinha de trigo'),
+    ('salgado003', N'carne moída'),
+    ('salgado003', N'cebola'),
+    ('salgado003', N'tomate'),
+    ('salgado005', N'farinha de trigo'),
+    ('salgado005', N'queijo'),
+    ('salgado005', N'fermento'),
+    ('salgado005', N'leite'),
+    ('biscoito001', N'polvilho'),
+    ('biscoito001', N'óleo'),
+    ('biscoito001', N'ovo'),
+    ('biscoito001', N'sal'),
+    ('biscoito005', N'farinha de trigo'),
+    ('biscoito005', N'queijo'),
+    ('biscoito005', N'manteiga'),
+    ('biscoito005', N'ovo'),
+    ('bolo001', N'farinha de trigo'),
+    ('bolo001', N'chocolate'),
+    ('bolo001', N'ovo'),
+    ('bolo001', N'açúcar'),
+    ('bolo001', N'leite'),
+    ('bolo004', N'farinha de trigo'),
+    ('bolo004', N'limão'),
+    ('bolo004', N'ovo'),
+    ('bolo004', N'açúcar'),
+    ('bolo004', N'manteiga');
 GO
 
 -- =============================================
